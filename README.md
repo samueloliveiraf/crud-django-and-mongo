@@ -1,4 +1,4 @@
-# Projeto-CRUD_DJANGO_AND_MONGO
+# Projeto-Crud_Django_and_Mongo
 ### Configuração para rodar o projeto
 
 Download Project
