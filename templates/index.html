@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+    <title> Home </title>
+
+    <!-- CSS  -->
+</head>
+
+<body>
+
+    <div class="container">
+       <h3>Bem vindo <a href="{% url 'logout' %}">Sair</a></h3> 
+
+       {% for product in object_list %}
+        {{ product.name }}
+        <img width="20" height="30" src="{{ product.imageURL }}" alt="">
+
+        <a href="{% url 'update_product' product.id %}">
+            <button>Editar</button>
+        </a>
+        <a href="{% url 'delete_product' product.id %}">
+            <button>Deletar</button>
+        </a>
+
+       {% endfor %}
+
+       <a href="{% url 'criate_product' %}">
+        <button>
+            Criar produto
+         </button>
+       </a>
+
+    </div>
+
+</body>
+
+</html>
