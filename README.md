@@ -25,7 +25,7 @@ Install Requirements
 
     pip install -r requeriments.txt
 
-Config DB_MONGO
+Config DB_MONGO settings.py
 
     DATABASES = {
       'default': {
